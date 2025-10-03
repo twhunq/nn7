@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập viết lại câu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Viết lại câu</h1>
+            <p>- Marine Developer -</p>
+        </header>
+
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+            <span class="progress-text" id="progressText">Câu 1 / 6</span>
+        </div>
+
+        <div class="question-container">
+            <div class="question-info">
+                <div class="question-header">
+                    <h2 id="questionNumber">Câu 1:</h2>
+                    <p class="instruction">Sắp xếp các từ dưới đây thành câu hoàn chỉnh:</p>
+                </div>
+            </div>
+
+            <div class="words-container" id="wordsContainer">
+
+            </div>
+
+            <div class="answer-area" id="answerArea">
+                <h3>Đáp án:</h3>
+                <div class="drop-zone" id="dropZone">
+                    <p class="placeholder">Kéo các từ vào đây để tạo câu</p>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="checkBtn" class="btn btn-primary">Kiểm tra</button>
+                <button id="resetBtn" class="btn btn-secondary">Làm lại</button>
+                <button id="nextBtn" class="btn btn-success" style="display: none;">Câu tiếp theo</button>
+            </div>
+
+            <div class="result" id="result"></div>
+        </div>
+
+        <div class="score-board" id="scoreBoard" style="display: none;">
+            <h2>Hoàn thành!</h2>
+            <p>Bạn đã hoàn thành tất cả các câu hỏi!</p>
+            <p>Điểm số: <span id="finalScore">0</span> / 6</p>
+            <button id="restartBtn" class="btn btn-primary">Làm lại từ đầu</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
