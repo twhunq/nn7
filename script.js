@@ -14,7 +14,7 @@ const questions = [
     },
     {
         words: ["the economy.", "because it", "Although", "and supports", "provides jobs", "takes time,", "the manufacturing process", "it is necessary"],
-        correctAnswer: "Although the manufacturing process takes time, it is necessary because it provides jobs and supports the economy"
+        correctAnswer: "Although the manufacturing process takes time, it is necessary because it provides jobs and supports the economy."
     },
     {
         words: ["Manufacturing", "every day.", "products", "an important process", "for people", "creates", "is", "because it"],
@@ -234,10 +234,15 @@ function moveWordToWordsContainer(wordElement) {
 // Kiểm tra đáp án
 function checkAnswer() {
     const answerWords = Array.from(dropZone.querySelectorAll('.answer-word'));
-    const userAnswer = answerWords.map(word => word.textContent).join(' ');
-    const correctAnswer = questions[currentQuestion].correctAnswer;
+    const userAnswer = answerWords.map(word => word.textContent).join(' ').trim();
+    const correctAnswer = questions[currentQuestion].correctAnswer.trim();
     
     result.style.display = 'block';
+    
+    // Debug: hiển thị câu trả lời để kiểm tra
+    console.log('User answer:', `"${userAnswer}"`);
+    console.log('Correct answer:', `"${correctAnswer}"`);
+    console.log('Are equal:', userAnswer === correctAnswer);
     
     if (userAnswer === correctAnswer) {
         result.className = 'result correct';
