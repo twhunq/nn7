@@ -23,6 +23,54 @@ const questions = [
     {
         words: ["the manufacturing process,", "want to improve", "you should add", "and train workers", "new technology", "carefully.", "If you"],
         correctAnswer: "If you want to improve the manufacturing process, you should add new technology and train workers carefully."
+    },
+    {
+        words: ["materials.", "works", "who", "in", "the lab", "The engineer", "checks the"],
+        correctAnswer: "The engineer who works in the lab checks the materials."
+    },
+    {
+        words: ["and quality.", "in manufacturing", "ensures", "safety", "A standard", "processes"],
+        correctAnswer: "A standard in manufacturing processes ensures safety and quality."
+    },
+    {
+        words: ["and", "to replace", "maintain.", "are easier", "that", "meet", "Products", "standards"],
+        correctAnswer: "Products that meet standards are easier to replace and maintain."
+    },
+    {
+        words: ["Workers", "others.", "who", "strictly follow", "themselves", "safety procedures", "not only", "but also", "protect"],
+        correctAnswer: "Workers who strictly follow safety procedures not only protect themselves but also others."
+    },
+    {
+        words: ["The factory", "new technology.", "products", "are made", "where", "uses"],
+        correctAnswer: "The factory where products are made uses new technology."
+    },
+    {
+        words: ["meets", "that", "A certification", "required standards.", "a product", "confirms"],
+        correctAnswer: "A certification confirms that a product meets required standards."
+    },
+    {
+        words: ["The parachute", "to create", "too", "small", "is", "enough drag."],
+        correctAnswer: "The parachute is too small to create enough drag."
+    },
+    {
+        words: ["has", "to rise", "The balloon", "lift", "enough", "into the air."],
+        correctAnswer: "The balloon has enough lift to rise into the air."
+    },
+    {
+        words: ["so that", "drag", "The plane's engine", "can fly.", "the plane", "to overcome", "powerful", "must be", "enough"],
+        correctAnswer: "The plane's engine must be powerful enough to overcome drag so that the plane can fly."
+    },
+    {
+        words: ["enough", "the ground.", "The", "doesn't", "leave", "thrust", "to", "rocket", "have"],
+        correctAnswer: "The rocket doesn't have enough thrust to leave the ground."
+    },
+    {
+        words: ["enough", "strong", "to lift", "The heat", "into the air.", "is not", "the balloon"],
+        correctAnswer: "The heat is not strong enough to lift the balloon into the air."
+    },
+    {
+        words: ["The", "engine", "to", "launch", "too", "produces", "the", "satellite.", "little", "thrust"],
+        correctAnswer: "The engine produces too little thrust to launch the satellite."
     }
 ];
 
@@ -30,6 +78,7 @@ const questions = [
 let currentQuestion = 0;
 let score = 0;
 let draggedElement = null;
+let completedQuestions = new Set(); // Track completed questions
 
 // DOM elements
 const wordsContainer = document.getElementById('wordsContainer');
@@ -44,14 +93,55 @@ const progressText = document.getElementById('progressText');
 const scoreBoard = document.getElementById('scoreBoard');
 const finalScore = document.getElementById('finalScore');
 const restartBtn = document.getElementById('restartBtn');
+const questionGrid = document.getElementById('questionGrid');
 
 // Khởi tạo trò chơi
 function initGame() {
     currentQuestion = 0;
     score = 0;
+    completedQuestions.clear();
+    createQuestionGrid();
     showQuestion();
     updateProgress();
     scoreBoard.style.display = 'none';
+}
+
+// Tạo grid danh sách câu hỏi
+function createQuestionGrid() {
+    questionGrid.innerHTML = '';
+    
+    for (let i = 0; i < questions.length; i++) {
+        const btn = document.createElement('button');
+        btn.className = 'question-btn';
+        btn.textContent = String(i + 1).padStart(2, '0');
+        btn.addEventListener('click', () => goToQuestion(i));
+        questionGrid.appendChild(btn);
+    }
+}
+
+// Chuyển đến câu hỏi cụ thể
+function goToQuestion(questionIndex) {
+    if (questionIndex >= 0 && questionIndex < questions.length) {
+        currentQuestion = questionIndex;
+        showQuestion();
+        updateProgress();
+        updateQuestionGrid();
+    }
+}
+
+// Cập nhật hiển thị grid câu hỏi
+function updateQuestionGrid() {
+    const buttons = questionGrid.querySelectorAll('.question-btn');
+    
+    buttons.forEach((btn, index) => {
+        btn.classList.remove('active', 'completed');
+        
+        if (index === currentQuestion) {
+            btn.classList.add('active');
+        } else if (completedQuestions.has(index)) {
+            btn.classList.add('completed');
+        }
+    });
 }
 
 // Hiển thị câu hỏi hiện tại
@@ -77,6 +167,9 @@ function showQuestion() {
     result.style.display = 'none';
     nextBtn.style.display = 'none';
     checkBtn.style.display = 'inline-block';
+    
+    // Cập nhật grid câu hỏi
+    updateQuestionGrid();
     
     // Cập nhật progress bar
     updateProgress();
@@ -229,6 +322,7 @@ function moveWordToWordsContainer(wordElement) {
         placeholder.textContent = 'Kéo các từ vào đây để tạo câu';
         dropZone.appendChild(placeholder);
     }
+
 }
 
 // Kiểm tra đáp án
@@ -248,6 +342,7 @@ function checkAnswer() {
         result.className = 'result correct';
         result.textContent = '🎉 Chính xác! Câu trả lời của bạn đúng!';
         score++;
+        completedQuestions.add(currentQuestion);
     } else {
         result.className = 'result incorrect';
         result.innerHTML = `❌ Chưa đúng. Đáp án đúng là:<br><strong>"${correctAnswer}"</strong>`;
@@ -255,6 +350,7 @@ function checkAnswer() {
     
     checkBtn.style.display = 'none';
     nextBtn.style.display = 'inline-block';
+    updateQuestionGrid();
     updateProgress();
 }
 
@@ -326,3 +422,4 @@ document.addEventListener('mouseout', (e) => {
         e.target.style.transform = 'translateY(0) scale(1)';
     }
 });
+

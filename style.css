@@ -14,13 +14,81 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
     background: white;
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     border: 1px solid #e9ecef;
+}
+
+.main-layout {
+    display: flex;
+    min-height: calc(100vh - 200px);
+}
+
+.content-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.question-sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    border-left: 1px solid #e9ecef;
+    padding: 24px 16px;
+}
+
+.question-sidebar h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.question-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+}
+
+.question-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #6c757d;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.question-btn:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+.question-btn.active {
+    background: #6c757d;
+    color: white;
+    border-color: #6c757d;
+}
+
+.question-btn.completed {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
 }
 
 header {
@@ -339,6 +407,30 @@ header p {
     
     .container {
         border-radius: 8px;
+        max-width: 100%;
+    }
+    
+    .main-layout {
+        flex-direction: column;
+    }
+    
+    .question-sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #e9ecef;
+        padding: 16px;
+    }
+    
+    .question-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+        max-height: 200px;
+    }
+    
+    .question-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.8rem;
     }
     
     header {
