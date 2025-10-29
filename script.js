@@ -93,7 +93,7 @@ const questions = [
         correctAnswer: "During their studies, students join practical projects such as smart control systems or automated equipment."
     },
     {
-        words: ["their goal", "is", "try to create", "because", "to improve the quality of life", "Engineers", "practical solutions to everyday problems"],
+        words: ["their goal", "is", "try to create", "because", "to improve the quality of life.", "Engineers", "practical solutions to everyday problems"],
         correctAnswer: "Engineers try to create practical solutions to everyday problems because their goal is to improve the quality of life."
     },
     {
