@@ -73,7 +73,7 @@ const questions = [
         correctAnswer: "The engine produces too little thrust to launch the satellite."
     },
     {
-        words: ["learning about", "want to", "because I", "study architecture", "buildings", "enjoy", "I"],
+        words: ["learning about", "want to", "because I", "study architecture", "buildings.", "enjoy", "I"],
         correctAnswer: "I want to study architecture because I enjoy learning about buildings."
     },
     {
