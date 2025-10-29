@@ -89,7 +89,7 @@ const questions = [
         correctAnswer: "When I visited the engineering museum last summer, I learnt a lot about old machines."
     },
     {
-        words: ["join practical projects", "students", "or automated equipment.", "During their studies", "such as smart control systems"],
+        words: ["join practical projects", "students", "or automated equipment.", "During their studies,", "such as smart control systems"],
         correctAnswer: "During their studies, students join practical projects such as smart control systems or automated equipment."
     },
     {
