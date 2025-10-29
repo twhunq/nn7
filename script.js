@@ -71,6 +71,126 @@ const questions = [
     {
         words: ["The", "engine", "to", "launch", "too", "produces", "the", "satellite.", "little", "thrust"],
         correctAnswer: "The engine produces too little thrust to launch the satellite."
+    },
+    {
+        words: ["learning about", "want to", "because I", "study architecture", "buildings", "enjoy", "I"],
+        correctAnswer: "I want to study architecture because I enjoy learning about buildings."
+    },
+    {
+        words: ["will help", "basic engineering principles", "The engineering course", "students", "develop", "an understanding of"],
+        correctAnswer: "The engineering course will help students develop an understanding of basic engineering principles."
+    },
+    {
+        words: ["James", "special tools", "uses", "to fix", "broken parts", "with production machines", "or repair problems"],
+        correctAnswer: "James uses special tools to fix broken parts or repair problems with production machines."
+    },
+    {
+        words: ["about old machines", "learnt a lot", "When I", "the engineering museum", "visited", "I", "last summer"],
+        correctAnswer: "When I visited the engineering museum last summer, I learnt a lot about old machines."
+    },
+    {
+        words: ["join practical projects", "students", "or automated equipment.", "During their studies", "such as smart control systems"],
+        correctAnswer: "During their studies, students join practical projects such as smart control systems or automated equipment."
+    },
+    {
+        words: ["their goal", "is", "try to create", "because", "to improve the quality of life", "Engineers", "practical solutions to everyday problems"],
+        correctAnswer: "Engineers try to create practical solutions to everyday problems because their goal is to improve the quality of life."
+    },
+    {
+        words: ["meet", "uses", "micrometers", "and calipers", "tolerance standards.", "Tony", "to check if parts"],
+        correctAnswer: "Tony uses micrometers and calipers to check if parts meet tolerance standards."
+    },
+    {
+        words: ["There", "with yesterday's batch,", "must", "could be", "carefully.", "a small problem", "so", "we", "check it"],
+        correctAnswer: "There could be a small problem with yesterday's batch, so we must check it carefully."
+    },
+    {
+        words: ["the final", "can", "identify", "QC inspectors", "during", "inspection.", "defective products"],
+        correctAnswer: "QC inspectors can identify defective products during the final inspection."
+    },
+    {
+        words: ["must", "during", "all safety procedures", "Workers", "production.", "and guidelines", "follow"],
+        correctAnswer: "Workers must follow all safety procedures and guidelines during production."
+    },
+    {
+        words: ["we", "to measure", "a wall?", "do", "use", "the length", "of", "Which tool"],
+        correctAnswer: "Which tool do we use to measure the length of a wall?"
+    },
+    {
+        words: ["department", "works", "issues", "manufacturing.", "The quality control", "in", "to prevent"],
+        correctAnswer: "The quality control department works to prevent issues in manufacturing."
+    },
+    {
+        words: ["The results", "recorded carefully", "were", "by", "the researchers", "after", "testing."],
+        correctAnswer: "The results were recorded carefully by the researchers after testing."
+    },
+    {
+        words: ["Steel cables", "are", "tested", "for", "tension", "by", "machines", "every day."],
+        correctAnswer: "Steel cables are tested for tension by machines every day."
+    },
+    {
+        words: ["Materials", "are", "checked for", "strain", "by engineers", "regularly."],
+        correctAnswer: "Materials are checked for strain by engineers regularly."
+    },
+    {
+        words: ["Concrete", "blocks", "were", "compressed", "under", "high pressure", "in the lab", "last week."],
+        correctAnswer: "Concrete blocks were compressed under high pressure in the lab last week."
+    },
+    {
+        words: ["Engineers", "measured", "the strength", "of the material.", "accurately yesterday", "to ensure", "shear", "forces"],
+        correctAnswer: "Engineers measured shear forces accurately yesterday to ensure the strength of the material."
+    },
+    {
+        words: ["beams", "measured", "in", "was", "Deflection", "during tests", "yesterday.", "that bent"],
+        correctAnswer: "Deflection in beams that bent was measured during tests yesterday."
+    },
+    {
+        words: ["In 2024,", "Samsung", "in Vietnam.", "for", "a", "launched", "smart TVs", "new factory"],
+        correctAnswer: "In 2024, Samsung launched a new factory for smart TVs in Vietnam."
+    },
+    {
+        words: ["built", "has recently", "research", "in Ho Chi Minh City.", "a", "The company", "center"],
+        correctAnswer: "The company has recently built a research center in Ho Chi Minh City."
+    },
+    {
+        words: ["in Vietnam yesterday.", "introduced", "for", "Nvidia", "chip", "an", "advanced", "AI systems"],
+        correctAnswer: "Nvidia introduced an advanced chip for AI systems in Vietnam yesterday."
+    },
+    {
+        words: ["for", "chips", "successfully developed", "FPT company", "advanced", "smart devices", "in 2022."],
+        correctAnswer: "FPT company successfully developed advanced chips for smart devices in 2022."
+    },
+    {
+        words: ["Recently,", "for AI devices.", "developed", "has", "Qualcomm", "smart chip solutions"],
+        correctAnswer: "Recently, Qualcomm has developed smart chip solutions for AI devices."
+    },
+    {
+        words: ["on", "Since 2022,", "we have", "global partners", "semiconductor projects.", "worked with"],
+        correctAnswer: "Since 2022, we have worked with global partners on semiconductor projects."
+    },
+    {
+        words: ["it is", "less", "and easier", "to shape.", "than", "cheaper", "but", "metal", "durable", "Wood", "is"],
+        correctAnswer: "Wood is less durable than metal but it is cheaper and easier to shape."
+    },
+    {
+        words: ["Aluminum", "is", "one", "of", "the", "least", "dense", "metals,", "and", "it", "is", "used", "to", "make", "airplanes."],
+        correctAnswer: "Aluminum is one of the least dense metals, and it is used to make airplanes."
+    },
+    {
+        words: ["material,", "most", "making tyres.", "it", "flexible", "Rubber", "is", "used", "for", "so", "the"],
+        correctAnswer: "Rubber is the most flexible material, so it is used for making tyres."
+    },
+    {
+        words: ["than", "so", "often used", "most other", "tools.", "in", "is", "metals,", "Steel", "harder", "it is"],
+        correctAnswer: "Steel is harder than most other metals, so it is often used in tools."
+    },
+    {
+        words: ["than", "ductile", "for wire", "is", "because", "more", "Copper", "most other metals.", "it is", "used"],
+        correctAnswer: "Copper is used for wire because it is more ductile than most other metals."
+    },
+    {
+        words: ["harder", "wood,", "building construction.", "often used", "in", "than", "is", "it is", "so", "Concrete"],
+        correctAnswer: "Concrete is harder than wood, so it is often used in building construction."
     }
 ];
 
