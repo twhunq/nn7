@@ -77,15 +77,15 @@ const questions = [
         correctAnswer: "I want to study architecture because I enjoy learning about buildings."
     },
     {
-        words: ["will help", "basic engineering principles", "The engineering course", "students", "develop", "an understanding of"],
+        words: ["will help", "basic engineering principles.", "The engineering course", "students", "develop", "an understanding of"],
         correctAnswer: "The engineering course will help students develop an understanding of basic engineering principles."
     },
     {
-        words: ["James", "special tools", "uses", "to fix", "broken parts", "with production machines", "or repair problems"],
+        words: ["James", "special tools", "uses", "to fix", "broken parts", "with production machines.", "or repair problems"],
         correctAnswer: "James uses special tools to fix broken parts or repair problems with production machines."
     },
     {
-        words: ["about old machines", "learnt a lot", "When I", "the engineering museum", "visited", "I", "last summer"],
+        words: ["about old machines.", "learnt a lot", "When I", "the engineering museum", "visited", "I", "last summer,"],
         correctAnswer: "When I visited the engineering museum last summer, I learnt a lot about old machines."
     },
     {
@@ -542,4 +542,3 @@ document.addEventListener('mouseout', (e) => {
         e.target.style.transform = 'translateY(0) scale(1)';
     }
 });
-
